@@ -21,13 +21,14 @@ public class SearchGoogleTest {
 
     @Before
     public void setUp() throws Exception {
+		System.setProperty("webdriver.gecko.driver", "D:\\Workspace\\geckodriver-v0.15.0-win64\\geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
     @After
     public void tearDown() throws Exception {
-        driver.quit();
+        //driver.quit();
     }
     @Test
     public void testGoogleSearch(){
